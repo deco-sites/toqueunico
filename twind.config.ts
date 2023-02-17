@@ -37,8 +37,8 @@ const options: Omit<Options, "selfURL"> = {
       },
     },
     fontFamily: {
-      sans: ["Lato", "sans-serif"],
-      serif: ["inherit", "serif"],
+      sans: ["Montserrat", "sans-serif"],
+      serif: ["Montserrat", "serif"],
     },
     screens: {
       sm: "640px",

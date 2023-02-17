@@ -346,16 +346,19 @@ const manifest: DecoManifest = {
         "title": " Header",
         "type": "object",
         "properties": {
-          "alerts": {
-            "type": "array",
-            "items": {
-              "type": "string",
-            },
-            "title": "Alerts",
+          "color": {
+            "type": "string",
+            "title": "Color",
+          },
+          "imgSrc": {
+            "format": "image-uri",
+            "type": "string",
+            "title": "Img Src",
           },
         },
         "required": [
-          "alerts",
+          "color",
+          "imgSrc",
         ],
       },
       "outputSchema": null,
