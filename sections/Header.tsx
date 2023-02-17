@@ -5,6 +5,7 @@ import { Image as LiveImage } from "$live/std/ui/types/Image.ts";
 import IconHeart from "https://deno.land/x/tabler_icons_tsx@0.0.2/tsx/heart.tsx";
 
 import CartButton from "../islands/CartButton.tsx";
+import SearchBar from "../islands/SearchBar.tsx";
 
 function NavItem({
   href,
@@ -60,6 +61,9 @@ function Header({ color = "", imgSrc }: Props) {
 
               <CartButton />
             </div>
+          </div>
+          <div class="mt-4">
+            <SearchBar />
           </div>
         </section>
 

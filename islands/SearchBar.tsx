@@ -1,5 +1,6 @@
 import { useEffect, useState } from "preact/hooks";
 import type { JSX } from "preact";
+import IconSearch from "https://deno.land/x/tabler_icons_tsx@0.0.2/tsx/search.tsx";
 
 export default function SearchBar() {
   const [query, setQuery] = useState("");
@@ -15,24 +16,22 @@ export default function SearchBar() {
   }, []);
 
   return (
-    <form onSubmit={onSearch}>
+    <form onSubmit={onSearch} class="relative">
       <label class="hidden" for="search">
         Busca
       </label>
       <input
         id="search"
-        class="w-60 border rounded h-9"
+        class="w-full h-[30px] border rounded h-9 rounded-[50px] pl-[32px] placeholder-[#C1C1C1] text-[10px]"
+        placeholder="Busque por produtos"
         value={query}
         onKeyUp={(event) => {
           setQuery(event.currentTarget.value);
         }}
       />
-      <button
-        type="submit"
-        class=" h-9 pointer-events-auto ml-8 rounded-md bg-gray-700 py-2 px-3 text-[0.8125rem] font-semibold leading-5 text-white hover:bg-black"
-      >
-        Buscar
-      </button>
+      <div class="absolute left-3 top-2.5">
+        <IconSearch class="w-4 h-4" />
+      </div>
     </form>
   );
 }
