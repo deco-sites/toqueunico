@@ -22,7 +22,7 @@ export default function SearchBar() {
       </label>
       <input
         id="search"
-        class="w-full h-[30px] border rounded h-9 rounded-[50px] pl-[32px] placeholder-[#C1C1C1] text-[10px]"
+        class="w-full h-[30px] md:h-[36px] md:w-[320px] border rounded h-9 rounded-[50px] pl-[32px] placeholder-[#C1C1C1] text-[10px] md:text-[14px]"
         placeholder="Busque por produtos"
         value={query}
         onKeyUp={(event) => {

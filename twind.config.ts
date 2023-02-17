@@ -37,6 +37,7 @@ const options: Omit<Options, "selfURL"> = {
       },
     },
     fontFamily: {
+      body: ["Montserrat", "sans-serif"],
       sans: ["Montserrat", "sans-serif"],
       serif: ["Montserrat", "serif"],
     },

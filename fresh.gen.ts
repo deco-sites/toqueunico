@@ -11,13 +11,14 @@ import * as $3 from "./routes/api/[...catchall].tsx";
 import * as $4 from "./routes/index.tsx";
 import * as $5 from "./routes/inspect-vscode.ts";
 import * as $$0 from "./islands/AddToCart.tsx";
-import * as $$1 from "./islands/CartButton.tsx";
-import * as $$2 from "./islands/CartModal.tsx";
-import * as $$3 from "./islands/LiveControls.tsx";
-import * as $$4 from "./islands/ProductInformation.tsx";
-import * as $$5 from "./islands/SearchBar.tsx";
-import * as $$6 from "./islands/SearchControls.tsx";
-import * as $$7 from "./islands/Slider.tsx";
+import * as $$1 from "./islands/CarouselItem.tsx";
+import * as $$2 from "./islands/CartButton.tsx";
+import * as $$3 from "./islands/CartModal.tsx";
+import * as $$4 from "./islands/LiveControls.tsx";
+import * as $$5 from "./islands/ProductInformation.tsx";
+import * as $$6 from "./islands/SearchBar.tsx";
+import * as $$7 from "./islands/SearchControls.tsx";
+import * as $$8 from "./islands/Slider.tsx";
 import * as $$$0 from "./sections/Banner.tsx";
 import * as $$$1 from "./sections/BannnerGrid.tsx";
 import * as $$$2 from "./sections/Button.story.tsx";
@@ -27,14 +28,15 @@ import * as $$$5 from "./sections/Header.tsx";
 import * as $$$6 from "./sections/HighlightedFeatures.tsx";
 import * as $$$7 from "./sections/MarcasConvidadas.tsx";
 import * as $$$8 from "./sections/Newsletter.tsx";
-import * as $$$9 from "./sections/ProductDetails.tsx";
-import * as $$$10 from "./sections/ProductGallery.tsx";
-import * as $$$11 from "./sections/ProductShelf.tsx";
-import * as $$$12 from "./sections/Search.tsx";
-import * as $$$13 from "./sections/SearchControls.tsx";
-import * as $$$14 from "./sections/Spacer.tsx";
-import * as $$$15 from "./sections/StoreFeatures.tsx";
-import * as $$$16 from "./sections/vtexconfig.global.tsx";
+import * as $$$9 from "./sections/OfferCarousel.tsx";
+import * as $$$10 from "./sections/ProductDetails.tsx";
+import * as $$$11 from "./sections/ProductGallery.tsx";
+import * as $$$12 from "./sections/ProductShelf.tsx";
+import * as $$$13 from "./sections/Search.tsx";
+import * as $$$14 from "./sections/SearchControls.tsx";
+import * as $$$15 from "./sections/Spacer.tsx";
+import * as $$$16 from "./sections/StoreFeatures.tsx";
+import * as $$$17 from "./sections/vtexconfig.global.tsx";
 import * as $$$$0 from "./functions/occProductDetailsPage.ts";
 import * as $$$$1 from "./functions/shopifyProductDetailsPage.ts";
 import * as $$$$2 from "./functions/shopifyProductList.ts";
@@ -54,13 +56,14 @@ const manifest: DecoManifest = {
   },
   islands: {
     "./islands/AddToCart.tsx": $$0,
-    "./islands/CartButton.tsx": $$1,
-    "./islands/CartModal.tsx": $$2,
-    "./islands/LiveControls.tsx": $$3,
-    "./islands/ProductInformation.tsx": $$4,
-    "./islands/SearchBar.tsx": $$5,
-    "./islands/SearchControls.tsx": $$6,
-    "./islands/Slider.tsx": $$7,
+    "./islands/CarouselItem.tsx": $$1,
+    "./islands/CartButton.tsx": $$2,
+    "./islands/CartModal.tsx": $$3,
+    "./islands/LiveControls.tsx": $$4,
+    "./islands/ProductInformation.tsx": $$5,
+    "./islands/SearchBar.tsx": $$6,
+    "./islands/SearchControls.tsx": $$7,
+    "./islands/Slider.tsx": $$8,
   },
   sections: {
     "./sections/Banner.tsx": $$$0,
@@ -72,14 +75,15 @@ const manifest: DecoManifest = {
     "./sections/HighlightedFeatures.tsx": $$$6,
     "./sections/MarcasConvidadas.tsx": $$$7,
     "./sections/Newsletter.tsx": $$$8,
-    "./sections/ProductDetails.tsx": $$$9,
-    "./sections/ProductGallery.tsx": $$$10,
-    "./sections/ProductShelf.tsx": $$$11,
-    "./sections/Search.tsx": $$$12,
-    "./sections/SearchControls.tsx": $$$13,
-    "./sections/Spacer.tsx": $$$14,
-    "./sections/StoreFeatures.tsx": $$$15,
-    "./sections/vtexconfig.global.tsx": $$$16,
+    "./sections/OfferCarousel.tsx": $$$9,
+    "./sections/ProductDetails.tsx": $$$10,
+    "./sections/ProductGallery.tsx": $$$11,
+    "./sections/ProductShelf.tsx": $$$12,
+    "./sections/Search.tsx": $$$13,
+    "./sections/SearchControls.tsx": $$$14,
+    "./sections/Spacer.tsx": $$$15,
+    "./sections/StoreFeatures.tsx": $$$16,
+    "./sections/vtexconfig.global.tsx": $$$17,
   },
   functions: {
     "./functions/occProductDetailsPage.ts": $$$$0,
@@ -488,6 +492,57 @@ const manifest: DecoManifest = {
     },
     "./sections/Newsletter.tsx": {
       "inputSchema": null,
+      "outputSchema": null,
+    },
+    "./sections/OfferCarousel.tsx": {
+      "inputSchema": {
+        "title": " Offer Carousel",
+        "type": "object",
+        "properties": {
+          "images": {
+            "title": "Images",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "mobile": {
+                  "format": "video-uri",
+                  "type": "string",
+                  "title": "Mobile",
+                },
+                "desktop": {
+                  "format": "video-uri",
+                  "type": "string",
+                  "title": "Desktop",
+                },
+                "redirectUrl": {
+                  "type": [
+                    "string",
+                    "null",
+                  ],
+                  "title": "Redirect Url",
+                },
+              },
+              "required": [
+                "mobile",
+                "desktop",
+              ],
+            },
+          },
+          "delay": {
+            "type": [
+              "number",
+              "null",
+            ],
+            "title": "delay",
+            "description": "Time to switch slides in seconds",
+            "default": "3",
+          },
+        },
+        "required": [
+          "images",
+        ],
+      },
       "outputSchema": null,
     },
     "./sections/ProductDetails.tsx": {
