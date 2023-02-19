@@ -1,9 +1,9 @@
-import { Video as LiveVideo } from "$live/std/ui/types/Video.ts";
+import { Image as LiveImage } from "$live/std/ui/types/Image.ts";
 import Video from "$live/std/ui/components/Video.tsx";
 
 export interface Props {
-  mobile: LiveVideo;
-  desktop: LiveVideo;
+  mobile: LiveImage;
+  desktop: LiveImage;
   redirectUrl: string;
   id: string;
 }
@@ -21,21 +21,14 @@ export default function CarouselItem(
       id={id}
       onClick={() => handleImageClick(redirectUrl || "")}
     >
-      <Video
+      <img
+        class="object-cover w-full h-[65vh]"
+        src={desktop}
+        alt="logo"
         loading="eager"
-        autoPlay
-        loop
-        controls={false}
-        muted
-        width={767}
-        height={360}
-        media="(max-width: 767px)"
-        class="object-cover md:hidden min-h-[360px] w-full cursor-pointer"
-        alt={redirectUrl}
-        sizes="25vw"
-        src={mobile}
       />
-      <Video
+      {
+        /* <Video
         loading="eager"
         autoPlay
         loop
@@ -48,7 +41,8 @@ export default function CarouselItem(
         alt={redirectUrl}
         sizes="50vw"
         src={desktop}
-      />
+      /> */
+      }
     </button>
   );
 }

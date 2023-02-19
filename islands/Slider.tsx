@@ -41,6 +41,17 @@ function Slider({ id, items, delay = 2_000 }: Props) {
       "[data-slider-content]",
     ) as HTMLDivElement;
 
+    const dots = document.getElementById(id)?.querySelectorAll("[data-dot]") ||
+      [];
+
+    dots.forEach((e) => e.classList.remove("bg-[#ECCDA5]"));
+
+    const currentDot = dots[index];
+
+    console.log(currentDot);
+
+    currentDot.classList.add("bg-[#ECCDA5]");
+
     if (content) {
       content.style.transform = `translateX(-${(100 / items) * index}%)`;
     }
