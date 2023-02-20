@@ -22,27 +22,17 @@ export default function CarouselItem(
       onClick={() => handleImageClick(redirectUrl || "")}
     >
       <img
-        class="object-cover w-full h-[65vh]"
+        class="inline md:hidden object-cover w-full h-[350px] "
+        src={mobile}
+        alt="logo"
+        loading="eager"
+      />
+      <img
+        class="hidden md:inline object-cover w-full h-[65vh]"
         src={desktop}
         alt="logo"
         loading="eager"
       />
-      {
-        /* <Video
-        loading="eager"
-        autoPlay
-        loop
-        controls={false}
-        muted
-        width={1280}
-        height={600}
-        media="(min-width: 768px)"
-        class="object-cover hidden md:block min-h-[55vh] w-full max-h-[600px] cursor-pointer"
-        alt={redirectUrl}
-        sizes="50vw"
-        src={desktop}
-      /> */
-      }
     </button>
   );
 }

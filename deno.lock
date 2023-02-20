@@ -250,7 +250,6 @@
     "https://deno.land/x/live@0.4.11/std/ui/components/Picture.tsx": "f9d0296a51c63d945772eec7fe20cc3466e2f4df2b234f7cac8b3aa7884111a9",
     "https://deno.land/x/live@0.4.11/std/ui/components/Video.tsx": "17d9c84ccacd4eaae8b895f34e53c788511966563eb3d16ec8fc0de868ab9f81",
     "https://deno.land/x/live@0.4.11/std/ui/types/Image.ts": "e39dbee3152bfddde82bb9626a35416c9fc9607be577fa293a70bd6b39d6e3be",
-    "https://deno.land/x/live@0.4.11/std/ui/types/Video.ts": "7a5a3e88017961b0324b151def0bcd9b1e584a89a01e23c1e7dfdb84a2e36a26",
     "https://deno.land/x/live@0.4.11/supabase.ts": "5d0c9ceccbaa35e254d23ece819ea924af8952950bcb025ad5ec02bdad7ca4a4",
     "https://deno.land/x/live@0.4.11/types.ts": "c2d877751990d22a8777bae1ddfbe87311cc6e6b3fc5337300f8595a78429495",
     "https://deno.land/x/live@0.4.11/utils/fetchAPI.ts": "beb99eca70ef0f5870a074cc52d550aedf7f103937898f3de55a9f63ad9cc737",

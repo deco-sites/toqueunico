@@ -15,7 +15,7 @@ export type Props =
   };
 
 const variants = {
-  primary: "text-white bg-primary-red rounded",
+  primary: "text-[#ECCDA5] bg-[#324836] rounded",
   secondary: "text-deco-black bg-custom-gray rounded",
   tertiary: "text-deco-black bg-transparent",
   danger: "text-white bg-primary-red-dark rounded",
@@ -23,7 +23,7 @@ const variants = {
 
 const sizes = {
   small: "font-medium text-sm px-3 py-2 h-9",
-  large: "font-medium text-lg px-4 py-3 h-12",
+  large: "font-medium text-lg px-5 py-4 h-[52px]",
 };
 
 const fits = {

@@ -48,8 +48,6 @@ function Slider({ id, items, delay = 2_000 }: Props) {
 
     const currentDot = dots[index];
 
-    console.log(currentDot);
-
     currentDot.classList.add("bg-[#ECCDA5]");
 
     if (content) {

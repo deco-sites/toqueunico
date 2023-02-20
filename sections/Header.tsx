@@ -79,7 +79,7 @@ function Header({ color = "", imgSrc }: Props) {
               alt="logo"
               loading="eager"
             />
-            <div class="flex items-center justify-center md:justify-between pl-8">
+            <div class="flex items-center justify-center md:justify-between pl-8 w-[275px] mr-8">
               <NavItem href="/">Home</NavItem>
               <NavItem href="/search?trade-policy=1&filter.departamento=feminino">
                 Categorias
@@ -88,7 +88,7 @@ function Header({ color = "", imgSrc }: Props) {
             <div class="flex-initial flex">
               <SearchBar />
             </div>
-            <div class="flex-1 flex items-center justify-end gap-6 ml-4">
+            <div class="flex items-center justify-end gap-6 ml-10">
               <a href="#" class="h-12 w-12 flex justify-center items-center">
                 <IconUser class="w-6 h-6 text-white" />
               </a>

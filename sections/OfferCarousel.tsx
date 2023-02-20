@@ -43,19 +43,19 @@ function OfferCarousel({ images = [], delay = 3 }: Props) {
         <IconChevronLeft
           data-slider-prev
           name="ChevronLeft"
-          class="h-[64px] w-[64px] text-white p-2 absolute top-[45%] left-1"
+          class="h-[32px] w-[32px] md:h-[64px] md:w-[64px] text-white p-2 absolute top-[45%] left-1 md:left-12 cursor-pointer"
         />
         <IconChevronRight
           data-slider-next
           name="ChevronRight"
-          class="h-[64px] w-[64px] text-white p-2 absolute top-[45%] right-1"
+          class="h-[32px] w-[32px] md:h-[64px] md:w-[64px] text-white p-2 absolute top-[45%] right-1 md:right-12 cursor-pointer"
         />
-        <div class="absolute z-30 bottom-5  flex w-full items-center justify-center">
+        <div class="absolute z-30 bottom-5 flex w-full items-center justify-center">
           {images.map((_, index) => (
             <div
               data-dot
               aria-label={`Focus slide carousel ${index}`}
-              class="w-[160px] h-[4px] bg-white dark:bg-gray-800 mx-2"
+              class="w-[38px] h-[1px] md:w-[160px] md:h-[4px]  bg-white dark:bg-gray-800 mx-2 cursor-pointer"
             />
           ))}
         </div>
