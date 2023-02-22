@@ -22,22 +22,23 @@ import * as $$8 from "./islands/Slider.tsx";
 import * as $$$0 from "./sections/Banner.tsx";
 import * as $$$1 from "./sections/BannnerGrid.tsx";
 import * as $$$2 from "./sections/Button.story.tsx";
-import * as $$$3 from "./sections/Footer.tsx";
-import * as $$$4 from "./sections/GiveYourTouch.tsx";
-import * as $$$5 from "./sections/Head.tsx";
-import * as $$$6 from "./sections/Header.tsx";
-import * as $$$7 from "./sections/HighlightedFeatures.tsx";
-import * as $$$8 from "./sections/MarcasConvidadas.tsx";
-import * as $$$9 from "./sections/Newsletter.tsx";
-import * as $$$10 from "./sections/OfferCarousel.tsx";
-import * as $$$11 from "./sections/ProductDetails.tsx";
-import * as $$$12 from "./sections/ProductGallery.tsx";
-import * as $$$13 from "./sections/ProductShelf.tsx";
-import * as $$$14 from "./sections/Search.tsx";
-import * as $$$15 from "./sections/SearchControls.tsx";
-import * as $$$16 from "./sections/Spacer.tsx";
-import * as $$$17 from "./sections/StoreFeatures.tsx";
-import * as $$$18 from "./sections/vtexconfig.global.tsx";
+import * as $$$3 from "./sections/Categories.tsx";
+import * as $$$4 from "./sections/Footer.tsx";
+import * as $$$5 from "./sections/GiveYourTouch.tsx";
+import * as $$$6 from "./sections/Head.tsx";
+import * as $$$7 from "./sections/Header.tsx";
+import * as $$$8 from "./sections/HighlightedFeatures.tsx";
+import * as $$$9 from "./sections/MarcasConvidadas.tsx";
+import * as $$$10 from "./sections/Newsletter.tsx";
+import * as $$$11 from "./sections/OfferCarousel.tsx";
+import * as $$$12 from "./sections/ProductDetails.tsx";
+import * as $$$13 from "./sections/ProductGallery.tsx";
+import * as $$$14 from "./sections/ProductShelf.tsx";
+import * as $$$15 from "./sections/Search.tsx";
+import * as $$$16 from "./sections/SearchControls.tsx";
+import * as $$$17 from "./sections/Spacer.tsx";
+import * as $$$18 from "./sections/StoreFeatures.tsx";
+import * as $$$19 from "./sections/vtexconfig.global.tsx";
 import * as $$$$0 from "./functions/occProductDetailsPage.ts";
 import * as $$$$1 from "./functions/shopifyProductDetailsPage.ts";
 import * as $$$$2 from "./functions/shopifyProductList.ts";
@@ -70,22 +71,23 @@ const manifest: DecoManifest = {
     "./sections/Banner.tsx": $$$0,
     "./sections/BannnerGrid.tsx": $$$1,
     "./sections/Button.story.tsx": $$$2,
-    "./sections/Footer.tsx": $$$3,
-    "./sections/GiveYourTouch.tsx": $$$4,
-    "./sections/Head.tsx": $$$5,
-    "./sections/Header.tsx": $$$6,
-    "./sections/HighlightedFeatures.tsx": $$$7,
-    "./sections/MarcasConvidadas.tsx": $$$8,
-    "./sections/Newsletter.tsx": $$$9,
-    "./sections/OfferCarousel.tsx": $$$10,
-    "./sections/ProductDetails.tsx": $$$11,
-    "./sections/ProductGallery.tsx": $$$12,
-    "./sections/ProductShelf.tsx": $$$13,
-    "./sections/Search.tsx": $$$14,
-    "./sections/SearchControls.tsx": $$$15,
-    "./sections/Spacer.tsx": $$$16,
-    "./sections/StoreFeatures.tsx": $$$17,
-    "./sections/vtexconfig.global.tsx": $$$18,
+    "./sections/Categories.tsx": $$$3,
+    "./sections/Footer.tsx": $$$4,
+    "./sections/GiveYourTouch.tsx": $$$5,
+    "./sections/Head.tsx": $$$6,
+    "./sections/Header.tsx": $$$7,
+    "./sections/HighlightedFeatures.tsx": $$$8,
+    "./sections/MarcasConvidadas.tsx": $$$9,
+    "./sections/Newsletter.tsx": $$$10,
+    "./sections/OfferCarousel.tsx": $$$11,
+    "./sections/ProductDetails.tsx": $$$12,
+    "./sections/ProductGallery.tsx": $$$13,
+    "./sections/ProductShelf.tsx": $$$14,
+    "./sections/Search.tsx": $$$15,
+    "./sections/SearchControls.tsx": $$$16,
+    "./sections/Spacer.tsx": $$$17,
+    "./sections/StoreFeatures.tsx": $$$18,
+    "./sections/vtexconfig.global.tsx": $$$19,
   },
   functions: {
     "./functions/occProductDetailsPage.ts": $$$$0,
@@ -282,6 +284,40 @@ const manifest: DecoManifest = {
           },
         },
         "required": [],
+      },
+      "outputSchema": null,
+    },
+    "./sections/Categories.tsx": {
+      "inputSchema": {
+        "title": " Categories",
+        "type": "object",
+        "properties": {
+          "categories": {
+            "title": "Categories",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "image": {
+                  "format": "image-uri",
+                  "type": "string",
+                  "title": "Image",
+                },
+                "name": {
+                  "type": "string",
+                  "title": "Name",
+                },
+              },
+              "required": [
+                "image",
+                "name",
+              ],
+            },
+          },
+        },
+        "required": [
+          "categories",
+        ],
       },
       "outputSchema": null,
     },

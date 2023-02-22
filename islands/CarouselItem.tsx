@@ -1,5 +1,4 @@
 import { Image as LiveImage } from "$live/std/ui/types/Image.ts";
-import Video from "$live/std/ui/components/Video.tsx";
 
 export interface Props {
   mobile: LiveImage;
