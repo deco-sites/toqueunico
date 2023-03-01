@@ -17,6 +17,7 @@
     "std/": "https://deno.land/std@0.162.0/",
     "@preact/signals": "https://esm.sh/*@preact/signals@1.0.3",
     "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.0.1",
-    "prefetch": "https://deno.land/x/prefetch@0.0.6/mod.ts"
+    "prefetch": "https://deno.land/x/prefetch@0.0.6/mod.ts",
+    "https://esm.sh/": "https://deco-sites-std-dyxxsy6sd9fg.deno.dev/"
   }
 }
